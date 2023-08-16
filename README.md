@@ -19,9 +19,6 @@
 - [5. 성능 개선 사항](#5-성능-개선-사항)
   - [5.1. Django ORM](#51-django-orm)
   - [5.2. Redis](#52-redis)
-- [6. 기타](#6-기타)
-  - [6.1. ERD](#61-erd)
-  - [6.2. 프로젝트 회고](#62-프로젝트-회고)
 
 # 1. 개요
 
@@ -209,7 +206,11 @@ Boogie 웹사이트는 사용자로부터 다양한 상호작용을 받을 수 �
 
 [Boogie 웹사이트: https://boogie-movie.site](https://boogie-movie.site)는 2022.12월 기준으로 약 6개월 간 서비스 할 예정입니다.
 
-[Boogie 배포 가이드 문서](./exec/deploy.md)는 exec 폴더에 README.md로 정리되어 있습니다. 배포에 대한 간략한 내용은 다음과 같습니다.
+- 공개 계정
+  - ID: user1
+  - password: 1q2w3e4r!
+
+[Boogie 배포 가이드 문서](https://byongho96.github.io/TIL/posts/DevOps/django_and_vue_with_ssh_actions/)는 exec 폴더에 README.md로 정리되어 있습니다. 배포에 대한 간략한 내용은 다음과 같습니다.
 
 - Vue & Django, AWS EC2 상 배포
 - Nginx를 이용한 url 요청 proxy pass
@@ -274,13 +275,3 @@ def movie_list_now(request):
     data = cache.get('now_movie')   # redis에서 캐싱된 데이터 제공
     return Response(data)
 ```
-
-# 6. 기타
-
-## 6.1. ERD
-
-<img src ="./assets/ERD.png" width=1000>
-
-## 6.2. 프로젝트 회고
-
-- [:popcorn: 이병호 Boogie 프로젝트 회고](https://mirage-promotion-263.notion.site/Boogie-Review-39844dc45ff14a0f982334fd52cf6142)
